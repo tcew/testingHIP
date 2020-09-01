@@ -1,11 +1,15 @@
+#include <assert.h>
 #include <stdio.h>
+#include <algorithm>
 #include <stdlib.h>
+#include<iostream>
+
 #include "hip/hip_runtime.h"
 
 // to compile on pascal node:
 // HIP_PLATFORM=nvcc hipcc -o hipFillVector hipFillVector.cpp
 
-#define FAKE_CUDA 0
+#define FAKE_CUDA 1
 
 __global__ void fillKernel(int N, int val, int *c_a){
 

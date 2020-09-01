@@ -1,0 +1,2 @@
+# To specify the path to CUDA (pre 10), the CUDA platform, the HIP compiler, that hipcc should pass the code to nvcc as .cu
+CUDA_PATH=/usr/local/cuda-9.2/ HIP_PLATFORM=nvcc hipcc -I.  -x cu -o hipFillVector hipFillVector.cpp 
